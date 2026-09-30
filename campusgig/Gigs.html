@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Browse Gigs | CampusGig</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">C</span>
+                CampusGig
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="gigs.html" class="active">Browse Gigs</a>
+                <a href="post-gig.html">Post a Gig</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="login.html" class="login-link">Log in</a>
+                <a href="register.html" class="btn btn-primary">Get Started</a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- PAGE HEADER -->
+    <section class="gigs-header">
+
+        <div class="container">
+
+            <div class="gigs-header-content">
+
+                <div>
+                    <span class="section-badge">OPPORTUNITIES</span>
+
+                    <h1>Find your next <span>campus gig.</span></h1>
+
+                    <p>
+                        Discover short-term opportunities posted by students
+                        and turn your skills into earnings.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- SEARCH -->
+            <div class="gig-search-box">
+
+                <div class="search-input-wrapper">
+                    <span class="search-icon">⌕</span>
+
+                    <input
+                        type="text"
+                        id="gigSearch"
+                        placeholder="Search gigs by title, skill or keyword..."
+                    >
+                </div>
+
+                <button class="btn btn-primary search-btn">
+                    Search
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MAIN GIG SECTION -->
+    <section class="gigs-section">
+
+        <div class="container">
+
+            <div class="gigs-layout">
+
+                <!-- SIDEBAR -->
+                <aside class="gig-filters">
+
+                    <div class="filter-header">
+                        <h3>Filters</h3>
+                        <button id="clearFilters">Clear</button>
+                    </div>
+
+
+                    <!-- CATEGORY -->
+                    <div class="filter-group">
+
+                        <h4>Category</h4>
+
+                        <label class="filter-option">
+                            <input type="checkbox" value="Design" class="category-filter">
+                            <span>Design</span>
+                        </label>
+
+                        <label class="filter-option">
+                            <input type="checkbox" value="Technology" class="category-filter">
+                            <span>Technology</span>
+                        </label>
+
+                        <label class="filter-option">
+                            <input type="checkbox" value="Tutoring" class="category-filter">
+                            <span>Tutoring</span>
+                        </label>
+
+                        <label class="filter-option">
+                            <input type="checkbox" value="Events" class="category-filter">
+                            <span>Events</span>
+                        </label>
+
+                    </div>
+
+
+                    <!-- BUDGET -->
+                    <div class="filter-group">
+
+                        <h4>Budget</h4>
+
+                        <label class="filter-option">
+                            <input type="radio" name="budget" value="all" checked>
+                            <span>Any budget</span>
+                        </label>
+
+                        <label class="filter-option">
+                            <input type="radio" name="budget" value="500">
+                            <span>Under ₹500</span>
+                        </label>
+
+                        <label class="filter-option">
+                            <input type="radio" name="budget" value="1000">
+                            <span>₹500 – ₹1,000</span>
+                        </label>
+
+                        <label class="filter-option">
+                            <input type="radio" name="budget" value="2000">
+                            <span>₹1,000+</span>
+                        </label>
+
+                    </div>
+
+
+                    <!-- DEADLINE -->
+                    <div class="filter-group">
+
+                        <h4>Deadline</h4>
+
+                        <label class="filter-option">
+                            <input type="radio" name="deadline" value="all" checked>
+                            <span>Any deadline</span>
+                        </label>
+
+                        <label class="filter-option">
+                            <input type="radio" name="deadline" value="week">
+                            <span>Within a week</span>
+                        </label>
+
+                        <label class="filter-option">
+                            <input type="radio" name="deadline" value="month">
+                            <span>Within a month</span>
+                        </label>
+
+                    </div>
+
+                </aside>
+
+
+                <!-- GIG CONTENT -->
+                <div class="gigs-content">
+
+                    <div class="gigs-topbar">
+
+                        <div>
+                            <h2>Available gigs</h2>
+                            <p>
+                                <span id="gigCount">6</span> opportunities found
+                            </p>
+                        </div>
+
+                        <select id="sortGigs" class="sort-select">
+                            <option value="latest">Latest</option>
+                            <option value="budget-high">Highest budget</option>
+                            <option value="budget-low">Lowest budget</option>
+                        </select>
+
+                    </div>
+
+
+                    <!-- GIG GRID -->
+                    <div class="gig-grid" id="gigGrid">
+
+
+                        <!-- GIG 1 -->
+                        <article
+                            class="gig-card"
+                            data-category="Design"
+                            data-budget="800"
+                        >
+
+                            <div class="gig-card-top">
+
+                                <span class="gig-category design">
+                                    Design
+                                </span>
+
+                                <span class="gig-budget">
+                                    ₹800
+                                </span>
+
+                            </div>
+
+                            <h3>Design a College Fest Poster</h3>
+
+                            <p>
+                                Need a creative poster for our upcoming
+                                university cultural fest.
+                            </p>
+
+                            <div class="gig-skills">
+                                <span>Canva</span>
+                                <span>Graphic Design</span>
+                            </div>
+
+                            <div class="gig-card-footer">
+
+                                <div class="poster-info">
+                                    <div class="avatar">A</div>
+
+                                    <div>
+                                        <strong>Arjun</strong>
+                                        <small>Posted 2h ago</small>
+                                    </div>
+                                </div>
+
+                                <div class="deadline">
+                                    ⏱ 5 days
+                                </div>
+
+                            </div>
+
+                            <a href="gig-details.html" class="gig-view-btn">
+                                View Gig →
+                            </a>
+
+                        </article>
+
+
+                        <!-- GIG 2 -->
+                        <article
+                            class="gig-card"
+                            data-category="Technology"
+                            data-budget="1200"
+                        >
+
+                            <div class="gig-card-top">
+
+                                <span class="gig-category technology">
+                                    Technology
+                                </span>
+
+                                <span class="gig-budget">
+                                    ₹1,200
+                                </span>
+
+                            </div>
+
+                            <h3>Build a Simple Portfolio Website</h3>
+
+                            <p>
+                                Looking for someone to create a clean
+                                personal portfolio website.
+                            </p>
+
+                            <div class="gig-skills">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+
+                            <div class="gig-card-footer">
+
+                                <div class="poster-info">
+                                    <div class="avatar">R</div>
+
+                                    <div>
+                                        <strong>Rahul</strong>
+                                        <small>Posted 4h ago</small>
+                                    </div>
+                                </div>
+
+                                <div class="deadline">
+                                    ⏱ 7 days
+                                </div>
+
+                            </div>
+
+                            <a href="gig-details.html" class="gig-view-btn">
+                                View Gig →
+                            </a>
+
+                        </article>
+
+
+                        <!-- GIG 3 -->
+                        <article
+                            class="gig-card"
+                            data-category="Tutoring"
+                            data-budget="500"
+                        >
+
+                            <div class="gig-card-top">
+
+                                <span class="gig-category tutoring">
+                                    Tutoring
+                                </span>
+
+                                <span class="gig-budget">
+                                    ₹500
+                                </span>
+
+                            </div>
+
+                            <h3>Help Me With Java Basics</h3>
+
+                            <p>
+                                Need help understanding Java OOP concepts
+                                before my upcoming exam.
+                            </p>
+
+                            <div class="gig-skills">
+                                <span>Java</span>
+                                <span>OOP</span>
+                            </div>
+
+                            <div class="gig-card-footer">
+
+                                <div class="poster-info">
+                                    <div class="avatar">S</div>
+
+                                    <div>
+                                        <strong>Shreya</strong>
+                                        <small>Posted 5h ago</small>
+                                    </div>
+                                </div>
+
+                                <div class="deadline">
+                                    ⏱ 3 days
+                                </div>
+
+                            </div>
+
+                            <a href="gig-details.html" class="gig-view-btn">
+                                View Gig →
+                            </a>
+
+                        </article>
+
+
+                        <!-- GIG 4 -->
+                        <article
+                            class="gig-card"
+                            data-category="Events"
+                            data-budget="1500"
+                        >
+
+                            <div class="gig-card-top">
+
+                                <span class="gig-category events">
+                                    Events
+                                </span>
+
+                                <span class="gig-budget">
+                                    ₹1,500
+                                </span>
+
+                            </div>
+
+                            <h3>Photography for College Event</h3>
+
+                            <p>
+                                Photographer required for a student club
+                                event happening this weekend.
+                            </p>
+
+                            <div class="gig-skills">
+                                <span>Photography</span>
+                                <span>Editing</span>
+                            </div>
+
+                            <div class="gig-card-footer">
+
+                                <div class="poster-info">
+                                    <div class="avatar">K</div>
+
+                                    <div>
+                                        <strong>Karan</strong>
+                                        <small>Posted 1d ago</small>
+                                    </div>
+                                </div>
+
+                                <div class="deadline">
+                                    ⏱ 4 days
+                                </div>
+
+                            </div>
+
+                            <a href="gig-details.html" class="gig-view-btn">
+                                View Gig →
+                            </a>
+
+                        </article>
+
+
+                        <!-- GIG 5 -->
+                        <article
+                            class="gig-card"
+                            data-category="Design"
+                            data-budget="650"
+                        >
+
+                            <div class="gig-card-top">
+
+                                <span class="gig-category design">
+                                    Design
+                                </span>
+
+                                <span class="gig-budget">
+                                    ₹650
+                                </span>
+
+                            </div>
+
+                            <h3>Instagram Posts for Student Club</h3>
+
+                            <p>
+                                Create five modern social media posts
+                                for our student community.
+                            </p>
+
+                            <div class="gig-skills">
+                                <span>Canva</span>
+                                <span>Social Media</span>
+                            </div>
+
+                            <div class="gig-card-footer">
+
+                                <div class="poster-info">
+                                    <div class="avatar">N</div>
+
+                                    <div>
+                                        <strong>Nikhil</strong>
+                                        <small>Posted 1d ago</small>
+                                    </div>
+                                </div>
+
+                                <div class="deadline">
+                                    ⏱ 8 days
+                                </div>
+
+                            </div>
+
+                            <a href="gig-details.html" class="gig-view-btn">
+                                View Gig →
+                            </a>
+
+                        </article>
+
+
+                        <!-- GIG 6 -->
+                        <article
+                            class="gig-card"
+                            data-category="Technology"
+                            data-budget="2000"
+                        >
+
+                            <div class="gig-card-top">
+
+                                <span class="gig-category technology">
+                                    Technology
+                                </span>
+
+                                <span class="gig-budget">
+                                    ₹2,000
+                                </span>
+
+                            </div>
+
+                            <h3>Fix My JavaScript Project</h3>
+
+                            <p>
+                                Need help debugging a small JavaScript
+                                project for my coursework.
+                            </p>
+
+                            <div class="gig-skills">
+                                <span>JavaScript</span>
+                                <span>Debugging</span>
+                            </div>
+
+                            <div class="gig-card-footer">
+
+                                <div class="poster-info">
+                                    <div class="avatar">V</div>
+
+                                    <div>
+                                        <strong>Vivek</strong>
+                                        <small>Posted 2d ago</small>
+                                    </div>
+                                </div>
+
+                                <div class="deadline">
+                                    ⏱ 10 days
+                                </div>
+
+                            </div>
+
+                            <a href="gig-details.html" class="gig-view-btn">
+                                View Gig →
+                            </a>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div>
+                    <div class="logo">
+                        <span class="logo-icon">C</span>
+                        CampusGig
+                    </div>
+
+                    <p>
+                        Connecting student skills with student opportunities.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="gigs.html">Browse Gigs</a>
+                    <a href="post-gig.html">Post a Gig</a>
+                    <a href="login.html">Login</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                © 2026 CampusGig. Built for students.
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

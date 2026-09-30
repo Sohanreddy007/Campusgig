@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | CampusGig</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="auth-body">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">C</span>
+                CampusGig
+            </a>
+
+            <div class="nav-actions">
+                <span class="auth-question">
+                    Don't have an account?
+                </span>
+
+                <a href="register.html" class="btn btn-outline">
+                    Sign up
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- LOGIN -->
+    <main class="auth-page">
+
+        <div class="auth-card">
+
+            <div class="auth-header">
+
+                <div class="auth-logo">
+                    C
+                </div>
+
+                <h1>Welcome back</h1>
+
+                <p>
+                    Log in to continue to CampusGig.
+                </p>
+
+            </div>
+
+
+            <form id="loginForm">
+
+                <!-- EMAIL -->
+                <div class="form-group">
+
+                    <label for="loginEmail">
+                        University email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        name="email"
+                        placeholder="you@woxsen.edu.in"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PASSWORD -->
+                <div class="form-group">
+
+                    <div class="password-label">
+
+                        <label for="loginPassword">
+                            Password
+                        </label>
+
+                        <a href="#">
+                            Forgot password?
+                        </a>
+
+                    </div>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        name="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- REMEMBER -->
+                <label class="remember-me">
+
+                    <input type="checkbox">
+
+                    <span>
+                        Remember me
+                    </span>
+
+                </label>
+
+
+                <!-- BUTTON -->
+                <button
+                    type="submit"
+                    class="btn btn-primary auth-submit"
+                >
+                    Log in
+                </button>
+
+            </form>
+
+
+            <!-- DIVIDER -->
+            <div class="auth-divider">
+
+                <span>or</span>
+
+            </div>
+
+
+            <!-- REGISTER -->
+            <div class="auth-bottom">
+
+                <p>
+                    New to CampusGig?
+                    <a href="register.html">
+                        Create an account
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="auth-footer">
+
+        <p>
+            © 2026 CampusGig. Built for students.
+        </p>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

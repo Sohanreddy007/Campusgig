@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Post a Gig | CampusGig</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">C</span>
+                CampusGig
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="gigs.html">Browse Gigs</a>
+                <a href="post-gig.html" class="active">Post a Gig</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="login.html" class="login-link">Log in</a>
+                <a href="register.html" class="btn btn-primary">
+                    Get Started
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- PAGE -->
+    <main class="post-gig-page">
+
+        <div class="container">
+
+            <div class="post-gig-header">
+
+                <span class="section-badge">
+                    CREATE OPPORTUNITY
+                </span>
+
+                <h1>Post a <span>new gig.</span></h1>
+
+                <p>
+                    Need help with something? Post a task and
+                    find talented students who can get it done.
+                </p>
+
+            </div>
+
+
+            <div class="post-gig-layout">
+
+                <!-- FORM -->
+                <div class="post-form-card">
+
+                    <form id="postGigForm">
+
+                        <!-- TITLE -->
+                        <div class="form-group">
+
+                            <label for="gigTitle">
+                                Gig title
+                            </label>
+
+                            <input
+                                type="text"
+                                id="gigTitle"
+                                name="title"
+                                placeholder="e.g. Design a poster for our college fest"
+                                required
+                            >
+
+                            <small>
+                                Keep your title short and specific.
+                            </small>
+
+                        </div>
+
+
+                        <!-- CATEGORY -->
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="gigCategory">
+                                    Category
+                                </label>
+
+                                <select
+                                    id="gigCategory"
+                                    name="category"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select category
+                                    </option>
+
+                                    <option value="Design">
+                                        Design
+                                    </option>
+
+                                    <option value="Technology">
+                                        Technology
+                                    </option>
+
+                                    <option value="Tutoring">
+                                        Tutoring
+                                    </option>
+
+                                    <option value="Events">
+                                        Events
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- BUDGET -->
+                            <div class="form-group">
+
+                                <label for="gigBudget">
+                                    Budget
+                                </label>
+
+                                <div class="input-with-symbol">
+                                    <span>₹</span>
+
+                                    <input
+                                        type="number"
+                                        id="gigBudget"
+                                        name="budget"
+                                        placeholder="800"
+                                        min="1"
+                                        required
+                                    >
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- DEADLINE -->
+                        <div class="form-group">
+
+                            <label for="gigDeadline">
+                                Deadline
+                            </label>
+
+                            <input
+                                type="date"
+                                id="gigDeadline"
+                                name="deadline"
+                                required
+                            >
+
+                            <small>
+                                Choose the date by which the work should
+                                be completed.
+                            </small>
+
+                        </div>
+
+
+                        <!-- DESCRIPTION -->
+                        <div class="form-group">
+
+                            <label for="gigDescription">
+                                Gig description
+                            </label>
+
+                            <textarea
+                                id="gigDescription"
+                                name="description"
+                                rows="7"
+                                placeholder="Describe what you need, what the student will be expected to do, and any important details..."
+                                required
+                            ></textarea>
+
+                            <small>
+                                Give applicants enough information to
+                                understand the task.
+                            </small>
+
+                        </div>
+
+
+                        <!-- SKILLS -->
+                        <div class="form-group">
+
+                            <label for="gigSkills">
+                                Required skills
+                            </label>
+
+                            <input
+                                type="text"
+                                id="gigSkills"
+                                name="skills"
+                                placeholder="e.g. Canva, Photoshop, Graphic Design"
+                            >
+
+                            <small>
+                                Separate multiple skills with commas.
+                            </small>
+
+                        </div>
+
+
+                        <!-- SUBMIT -->
+                        <div class="form-submit">
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary post-submit-btn"
+                            >
+                                Post Gig →
+                            </button>
+
+                            <p>
+                                By posting, you agree to CampusGig's
+                                community guidelines.
+                            </p>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+
+                <!-- RIGHT INFORMATION -->
+                <aside class="post-gig-info">
+
+                    <div class="info-card">
+
+                        <div class="info-icon">
+                            💡
+                        </div>
+
+                        <h3>
+                            Make your gig stand out
+                        </h3>
+
+                        <p>
+                            Clear descriptions and realistic budgets
+                            attract better applicants.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Be specific about the task
+                            </li>
+
+                            <li>
+                                Mention important requirements
+                            </li>
+
+                            <li>
+                                Set a realistic deadline
+                            </li>
+
+                            <li>
+                                Offer a fair budget
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="info-card purple-info">
+
+                        <div class="info-icon">
+                            ✓
+                        </div>
+
+                        <h3>
+                            What happens next?
+                        </h3>
+
+                        <p>
+                            Once your gig is posted, students can
+                            discover it and send applications.
+                        </p>
+
+                        <div class="mini-step">
+
+                            <span>1</span>
+
+                            <div>
+                                <strong>Students apply</strong>
+                                <small>
+                                    They submit their pitch.
+                                </small>
+                            </div>
+
+                        </div>
+
+                        <div class="mini-step">
+
+                            <span>2</span>
+
+                            <div>
+                                <strong>You review</strong>
+                                <small>
+                                    Compare applicants.
+                                </small>
+                            </div>
+
+                        </div>
+
+                        <div class="mini-step">
+
+                            <span>3</span>
+
+                            <div>
+                                <strong>Hire someone</strong>
+                                <small>
+                                    Choose the best applicant.
+                                </small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div>
+
+                    <div class="logo">
+                        <span class="logo-icon">C</span>
+                        CampusGig
+                    </div>
+
+                    <p>
+                        Connecting student skills with student opportunities.
+                    </p>
+
+                </div>
+
+                <div class="footer-links">
+
+                    <a href="index.html">Home</a>
+                    <a href="gigs.html">Browse Gigs</a>
+                    <a href="post-gig.html">Post a Gig</a>
+                    <a href="login.html">Login</a>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                © 2026 CampusGig. Built for students.
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
