@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app
+    xmlns="https://jakarta.ee/xml/ns/jakartaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+    version="6.0">
+
+    <display-name>CampusGig</display-name>
+
+
+    <!-- POST GIG -->
+
+    <servlet>
+        <servlet-name>PostGigServlet</servlet-name>
+
+        <servlet-class>
+            com.campusgig.servlet.PostGigServlet
+        </servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PostGigServlet</servlet-name>
+
+        <url-pattern>/post-gig</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- GET ALL GIGS -->
+
+    <servlet>
+        <servlet-name>GetGigsServlet</servlet-name>
+
+        <servlet-class>
+            com.campusgig.servlet.GetGigsServlet
+        </servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GetGigsServlet</servlet-name>
+
+        <url-pattern>/get-gigs</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- GET ONE GIG -->
+
+    <servlet>
+        <servlet-name>GetGigServlet</servlet-name>
+
+        <servlet-class>
+            com.campusgig.servlet.GetGigServlet
+        </servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GetGigServlet</servlet-name>
+
+        <url-pattern>/get-gig</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- APPLY FOR GIG -->
+
+    <servlet>
+        <servlet-name>ApplyGigServlet</servlet-name>
+
+        <servlet-class>
+            com.campusgig.servlet.ApplyGigServlet
+        </servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ApplyGigServlet</servlet-name>
+
+        <url-pattern>/apply-gig</url-pattern>
+    </servlet-mapping>
+
+
+<servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>com.campusgig.servlet.RegisterServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/register</url-pattern>
+</servlet-mapping><servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.campusgig.servlet.LoginServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+</servlet-mapping>
+   
+<servlet>
+    <servlet-name>SessionServlet</servlet-name>
+    <servlet-class>com.campusgig.servlet.SessionServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>SessionServlet</servlet-name>
+    <url-pattern>/session</url-pattern>
+</servlet-mapping></web-app>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | CampusGig</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                Campus<span>Gig</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="gigs.html">Browse Gigs</a>
+                <a href="post-gig.html">Post a Gig</a>
+                <a href="dashboard.html" class="active">Dashboard</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="login.html" class="nav-login">Log in</a>
+                <a href="register.html" class="nav-register">Get Started</a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- Dashboard Header -->
+    <section class="dashboard-header">
+        <div class="dashboard-container">
+
+            <div>
+              <p class="dashboard-welcome">
+    Welcome back, <span id="userName">Student</span> 👋
+</p>
+
+<h1>My Dashboard</h1>
+
+<p class="dashboard-subtitle">
+    Manage your gigs, applications and campus opportunities.
+</p>
+
+<p id="userEmail" style="margin-top: 8px;"></p>
+                <p class="dashboard-subtitle">
+                    Manage your gigs, applications and campus opportunities.
+                </p>
+            </div>
+
+            <a href="post-gig.html" class="primary-btn">
+                + Post a Gig
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- Dashboard Content -->
+    <main class="dashboard-container">
+
+        <!-- Stats -->
+        <section class="dashboard-stats">
+
+            <div class="dashboard-stat-card">
+                <div class="stat-icon">📋</div>
+                <div>
+                    <span>Gigs Posted</span>
+                    <strong>3</strong>
+                </div>
+            </div>
+
+            <div class="dashboard-stat-card">
+                <div class="stat-icon">📨</div>
+                <div>
+                    <span>Applications</span>
+                    <strong>8</strong>
+                </div>
+            </div>
+
+            <div class="dashboard-stat-card">
+                <div class="stat-icon">🤝</div>
+                <div>
+                    <span>Gigs Hired</span>
+                    <strong>2</strong>
+                </div>
+            </div>
+
+            <div class="dashboard-stat-card">
+                <div class="stat-icon">💰</div>
+                <div>
+                    <span>Total Earnings</span>
+                    <strong>₹2,400</strong>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Dashboard Grid -->
+        <section class="dashboard-grid">
+
+            <!-- My Gigs -->
+            <div class="dashboard-card">
+
+                <div class="dashboard-card-header">
+                    <div>
+                        <h2>My Gigs</h2>
+                        <p>Gigs you have posted</p>
+                    </div>
+
+                    <a href="post-gig.html" class="small-btn">
+                        + New Gig
+                    </a>
+                </div>
+
+
+                <div class="dashboard-gig">
+
+                    <div class="gig-status pending">
+                        Pending
+                    </div>
+
+                    <h3>Design a College Fest Poster</h3>
+
+                    <p>
+                        Create an attractive promotional poster for our upcoming
+                        college fest.
+                    </p>
+
+                    <div class="dashboard-gig-info">
+                        <span>💰 ₹800</span>
+                        <span>📅 Sep 15, 2026</span>
+                        <span>👥 4 applicants</span>
+                    </div>
+
+                    <a href="gig-details.html" class="dashboard-link">
+                        View Gig →
+                    </a>
+
+                </div>
+
+
+                <div class="dashboard-gig">
+
+                    <div class="gig-status hired">
+                        Hired
+                    </div>
+
+                    <h3>Help With Python Assignment</h3>
+
+                    <p>
+                        Looking for someone to help explain Python concepts
+                        and debugging.
+                    </p>
+
+                    <div class="dashboard-gig-info">
+                        <span>💰 ₹600</span>
+                        <span>📅 Sep 12, 2026</span>
+                        <span>👥 3 applicants</span>
+                    </div>
+
+                    <a href="gig-details.html" class="dashboard-link">
+                        View Gig →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Applications -->
+            <div class="dashboard-card">
+
+                <div class="dashboard-card-header">
+                    <div>
+                        <h2>My Applications</h2>
+                        <p>Gigs you applied for</p>
+                    </div>
+
+                    <a href="gigs.html" class="small-btn">
+                        Browse Gigs
+                    </a>
+                </div>
+
+
+                <div class="application-item">
+
+                    <div class="application-icon">
+                        🎨
+                    </div>
+
+                    <div class="application-content">
+                        <h3>Instagram Post Designer</h3>
+                        <p>Design · ₹500</p>
+                    </div>
+
+                    <span class="application-status pending">
+                        Pending
+                    </span>
+
+                </div>
+
+
+                <div class="application-item">
+
+                    <div class="application-icon">
+                        💻
+                    </div>
+
+                    <div class="application-content">
+                        <h3>Website Bug Fixing</h3>
+                        <p>Technology · ₹1,000</p>
+                    </div>
+
+                    <span class="application-status hired">
+                        Hired
+                    </span>
+
+                </div>
+
+
+                <div class="application-item">
+
+                    <div class="application-icon">
+                        📚
+                    </div>
+
+                    <div class="application-content">
+                        <h3>Math Tutoring</h3>
+                        <p>Tutoring · ₹700</p>
+                    </div>
+
+                    <span class="application-status rejected">
+                        Rejected
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+
+            <h2>Quick Actions</h2>
+
+            <div class="quick-action-grid">
+
+                <a href="post-gig.html" class="quick-action-card">
+                    <span>➕</span>
+                    <div>
+                        <h3>Post a Gig</h3>
+                        <p>Need help with something?</p>
+                    </div>
+                </a>
+
+                <a href="gigs.html" class="quick-action-card">
+                    <span>🔍</span>
+                    <div>
+                        <h3>Find Work</h3>
+                        <p>Explore campus opportunities</p>
+                    </div>
+                </a>
+
+                <a href="register.html" class="quick-action-card">
+                    <span>👤</span>
+                    <div>
+                        <h3>Complete Profile</h3>
+                        <p>Add your skills and portfolio</p>
+                    </div>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div>
+                <a href="index.html" class="logo">
+                    Campus<span>Gig</span>
+                </a>
+
+                <p>
+                    Connecting students through skills,
+                    opportunities and micro-tasks.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <a href="gigs.html">Browse Gigs</a>
+                <a href="post-gig.html">Post a Gig</a>
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 CampusGig. Built for students.
+        </div>
+    </footer>
+
+<script>
+    fetch("/CampusGig/session")
+        .then(response => {
+
+            if (!response.ok) {
+                window.location.href = "login.html";
+                return null;
+            }
+
+            return response.json();
+        })
+        .then(data => {
+
+            if (!data || !data.loggedIn) {
+                window.location.href = "login.html";
+                return;
+            }
+
+            document.getElementById("userName").textContent =
+                data.name;
+
+            document.getElementById("userEmail").textContent =
+                data.email;
+        })
+        .catch(error => {
+
+            console.error("Session error:", error);
+
+            window.location.href = "login.html";
+        });
+</script></body>
+</html>

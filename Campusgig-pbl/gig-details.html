@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CampusGig | Gig Details</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <style>
+
+        /* ================= PAGE ================= */
+
+        .details-page {
+
+            padding: 70px 7% 90px;
+
+            max-width: 1100px;
+
+            margin: auto;
+
+        }
+
+
+        /* ================= BACK ================= */
+
+        .back-link {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            text-decoration: none;
+
+            color: #666;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            margin-bottom: 35px;
+
+        }
+
+        .back-link:hover {
+
+            color: #7c3aed;
+
+        }
+
+
+        /* ================= CARD ================= */
+
+        .gig-details-card {
+
+            background: white;
+
+            border: 1px solid #eeeeee;
+
+            border-radius: 20px;
+
+            padding: 40px;
+
+            box-shadow:
+                0 10px 35px rgba(0,0,0,0.06);
+
+        }
+
+
+        /* ================= TOP ================= */
+
+        .details-top {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-start;
+
+            gap: 30px;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .details-category {
+
+            display: inline-block;
+
+            padding: 7px 12px;
+
+            border-radius: 8px;
+
+            background: #f1eaff;
+
+            color: #7c3aed;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 0.7px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .gig-details-card h1 {
+
+            font-size: 38px;
+
+            line-height: 1.25;
+
+            margin: 0;
+
+        }
+
+
+        /* ================= DESCRIPTION ================= */
+
+        .details-description {
+
+            font-size: 16px;
+
+            line-height: 1.8;
+
+            color: #666;
+
+            margin: 0 0 35px;
+
+            white-space: pre-wrap;
+
+        }
+
+
+        /* ================= INFO ================= */
+
+        .details-info {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 18px;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        .info-box {
+
+            background: #fafafa;
+
+            border: 1px solid #eeeeee;
+
+            border-radius: 14px;
+
+            padding: 20px;
+
+        }
+
+
+        .info-label {
+
+            font-size: 11px;
+
+            color: #888;
+
+            font-weight: 700;
+
+            margin-bottom: 8px;
+
+            letter-spacing: 0.5px;
+
+        }
+
+
+        .info-value {
+
+            font-size: 22px;
+
+            font-weight: 800;
+
+            color: #111827;
+
+        }
+
+
+        /* ================= USER ================= */
+
+        .posted-by {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            padding-top: 25px;
+
+            border-top: 1px solid #eeeeee;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .posted-avatar {
+
+            width: 44px;
+
+            height: 44px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: #eee9ff;
+
+            color: #7c3aed;
+
+            font-weight: 800;
+
+        }
+
+
+        .posted-text {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 3px;
+
+        }
+
+
+        .posted-text strong {
+
+            font-size: 14px;
+
+        }
+
+
+        .posted-text span {
+
+            font-size: 12px;
+
+            color: #888;
+
+        }
+
+
+        /* ================= APPLY ================= */
+
+        .apply-button {
+
+            width: 100%;
+
+            border: none;
+
+            background: #111827;
+
+            color: white;
+
+            padding: 16px;
+
+            border-radius: 11px;
+
+            font-family: inherit;
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+
+        }
+
+
+        .apply-button:hover {
+
+            background: #7c3aed;
+
+            transform: translateY(-2px);
+
+        }
+
+
+        /* ================= LOADING ================= */
+
+        .loading {
+
+            text-align: center;
+
+            padding: 100px 20px;
+
+            color: #777;
+
+        }
+
+
+        .error-box {
+
+            text-align: center;
+
+            padding: 70px 20px;
+
+            background: white;
+
+            border: 1px solid #eeeeee;
+
+            border-radius: 18px;
+
+        }
+
+
+        .error-box h2 {
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .error-box p {
+
+            color: #777;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .back-button {
+
+            display: inline-block;
+
+            text-decoration: none;
+
+            background: #111827;
+
+            color: white;
+
+            padding: 12px 20px;
+
+            border-radius: 9px;
+
+            font-weight: 600;
+
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 650px) {
+
+            .details-page {
+
+                padding: 45px 20px 70px;
+
+            }
+
+
+            .gig-details-card {
+
+                padding: 25px;
+
+            }
+
+
+            .gig-details-card h1 {
+
+                font-size: 29px;
+
+            }
+
+
+            .details-info {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+    <a href="index.html" class="logo">
+
+        <span class="logo-mark">
+            C
+        </span>
+
+        <span>
+            Campus<span class="logo-purple">Gig</span>
+        </span>
+
+    </a>
+
+
+    <div class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="Gigs.html">
+            Browse Gigs
+        </a>
+
+        <a href="post-gig.html">
+            Post a Gig
+        </a>
+
+    </div>
+
+
+    <div class="nav-right">
+
+        <a href="login.html"
+           class="login-link">
+
+            Log in
+
+        </a>
+
+        <a href="register.html"
+           class="nav-button">
+
+            Get Started
+
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= MAIN ================= -->
+
+<main>
+
+    <section class="details-page">
+
+
+        <a href="Gigs.html"
+           class="back-link">
+
+            ← Back to gigs
+
+        </a>
+
+
+        <div id="detailsContainer">
+
+            <div class="loading">
+
+                Loading gig details...
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+
+        Campus<span>Gig</span>
+
+    </div>
+
+
+    <p>
+        A student-powered marketplace for campus opportunities.
+    </p>
+
+
+    <div class="footer-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="Gigs.html">
+            Browse Gigs
+        </a>
+
+        <a href="post-gig.html">
+            Post a Gig
+        </a>
+
+        <a href="login.html">
+            Login
+        </a>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 CampusGig · Built for students
+
+    </div>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+
+async function loadGigDetails() {
+
+
+    const container =
+        document.getElementById(
+            "detailsContainer"
+        );
+
+
+    /*
+     * IMPORTANT:
+     *
+     * Get the ID from the URL.
+     *
+     * Example:
+     *
+     * gig-details.html?id=2
+     *
+     * gives:
+     *
+     * gigId = 2
+     */
+
+    const urlParams =
+        new URLSearchParams(
+            window.location.search
+        );
+
+
+    const gigId =
+        urlParams.get("id");
+
+
+    /* Make sure an ID exists */
+
+    if (!gigId) {
+
+        showError(
+            "No gig ID was provided."
+        );
+
+        return;
+
+    }
+
+
+    /*
+     * Make sure the ID is actually a number.
+     */
+
+    if (!/^\d+$/.test(gigId)) {
+
+        showError(
+            "Invalid gig ID."
+        );
+
+        return;
+
+    }
+
+
+    try {
+
+
+        /*
+         * IMPORTANT:
+         *
+         * Use the ID from the URL.
+         *
+         * DO NOT use a fixed ID such as:
+         *
+         * get-gig?id=1
+         *
+         */
+
+        const response =
+            await fetch(
+                "/CampusGig/get-gig?id=" +
+                encodeURIComponent(gigId)
+            );
+
+
+        if (!response.ok) {
+
+            if (response.status === 404) {
+
+                throw new Error(
+                    "Gig not found."
+                );
+
+            }
+
+            throw new Error(
+                "Server returned " +
+                response.status
+            );
+
+        }
+
+
+        const gig =
+            await response.json();
+
+
+        /*
+         * Check that the returned gig
+         * is actually valid.
+         */
+
+        if (!gig || !gig.id) {
+
+            throw new Error(
+                "Invalid gig data received."
+            );
+
+        }
+
+
+        displayGig(gig);
+
+
+    }
+    catch (error) {
+
+
+        console.error(
+            "Error loading gig:",
+            error
+        );
+
+
+        showError(
+            error.message
+        );
+
+    }
+
+}
+
+
+
+function displayGig(gig) {
+
+
+    const container =
+        document.getElementById(
+            "detailsContainer"
+        );
+
+
+    const title =
+        gig.title || "Untitled Gig";
+
+
+    const description =
+        gig.description ||
+        "No description provided.";
+
+
+    const budget =
+        Number(gig.budget || 0)
+            .toLocaleString("en-IN");
+
+
+    const deadline =
+        gig.deadline ||
+        "Not specified";
+
+
+    const category =
+        getCategory(
+            title,
+            description
+        );
+
+
+    const avatarLetter =
+        title
+            .charAt(0)
+            .toUpperCase();
+
+
+    container.innerHTML = `
+
+        <article class="gig-details-card">
+
+
+            <div class="details-top">
+
+                <div>
+
+                    <span class="details-category">
+
+                        ${category}
+
+                    </span>
+
+
+                    <h1>
+
+                        ${escapeHTML(title)}
+
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <p class="details-description">
+
+                ${escapeHTML(description)}
+
+            </p>
+
+
+            <div class="details-info">
+
+
+                <div class="info-box">
+
+                    <div class="info-label">
+
+                        BUDGET
+
+                    </div>
+
+
+                    <div class="info-value">
+
+                        ₹${budget}
+
+                    </div>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <div class="info-label">
+
+                        DEADLINE
+
+                    </div>
+
+
+                    <div class="info-value">
+
+                        ${escapeHTML(deadline)}
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="posted-by">
+
+
+                <div class="posted-avatar">
+
+                    ${avatarLetter}
+
+                </div>
+
+
+                <div class="posted-text">
+
+                    <strong>
+                        Campus Student
+                    </strong>
+
+                    <span>
+                        Posted on CampusGig
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <button
+                class="apply-button"
+                onclick="applyForGig(${gig.id})">
+
+                Apply for this Gig
+
+            </button>
+
+
+        </article>
+
+    `;
+
+}
+
+
+
+function getCategory(
+    title,
+    description
+) {
+
+
+    const text =
+        (
+            title +
+            " " +
+            description
+        ).toLowerCase();
+
+
+    if (
+        text.includes("design") ||
+        text.includes("poster") ||
+        text.includes("logo")
+    ) {
+
+        return "DESIGN";
+
+    }
+
+
+    if (
+        text.includes("java") ||
+        text.includes("coding") ||
+        text.includes("website") ||
+        text.includes("technical")
+    ) {
+
+        return "TECHNOLOGY";
+
+    }
+
+
+    if (
+        text.includes("teach") ||
+        text.includes("tutor") ||
+        text.includes("help")
+    ) {
+
+        return "TUTORING";
+
+    }
+
+
+    if (
+        text.includes("event") ||
+        text.includes("campus") ||
+        text.includes("photography")
+    ) {
+
+        return "EVENTS";
+
+    }
+
+
+    return "GENERAL";
+
+}
+
+
+
+function escapeHTML(text) {
+
+
+    if (
+        text === null ||
+        text === undefined
+    ) {
+
+        return "";
+
+    }
+
+
+    const div =
+        document.createElement("div");
+
+
+    div.textContent =
+        text;
+
+
+    return div.innerHTML;
+
+}
+
+
+
+function showError(message) {
+
+
+    const container =
+        document.getElementById(
+            "detailsContainer"
+        );
+
+
+    container.innerHTML = `
+
+        <div class="error-box">
+
+            <h2>
+                Unable to load gig
+            </h2>
+
+            <p>
+                ${escapeHTML(message)}
+            </p>
+
+            <a
+                href="Gigs.html"
+                class="back-button">
+
+                Back to Browse Gigs
+
+            </a>
+
+        </div>
+
+    `;
+
+}
+
+function applyForGig(gigId) {
+
+    const form = document.createElement("form");
+
+    form.method = "POST";
+    form.action = "/CampusGig/apply-gig";
+
+    const input = document.createElement("input");
+
+    input.type = "hidden";
+    input.name = "gig_id";
+    input.value = gigId;
+
+    form.appendChild(input);
+
+    document.body.appendChild(form);
+
+    form.submit();
+}
+
+
+
+/* Start */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    loadGigDetails
+);
+
+</script>
+
+
+</body>
+
+</html>
